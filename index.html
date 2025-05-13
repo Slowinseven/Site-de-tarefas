@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            alice: ['"Alice"', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  </head>
+  <body class="bg-gray-100">
+    <header>
+            <h1 class="text-black text-2xl font-bold ml-5 mt-5">Gerenciador de Tarefas</h1>
+    </header>
+<main class="grid grid-cols-1 gap-6 p-8 md:grid-cols-3">
+
+  <!-- Tarefa 1 -->
+  <div class="bg-white text-black w-64 h-40 rounded-md flex flex-col shadow p-3 mx-auto">
+    <h2 class="font-bold text-xl">Título da tarefa</h2>
+    <p class="mt-1">descrição da tarefa...</p>
+    <div class="flex items-center justify-between mt-2">
+      <div class="rounded-2xl px-3 py-1 bg-red-700 text-white font-bold text-sm">Alta prioridade</div>
+      <p class="text-red-600 font-bold cursor-pointer">Excluir</p>
+    </div>
+    <div class="text-white bg-green-600 w-full h-11 rounded-lg flex mt-3 font-bold items-center justify-center cursor-pointer">
+      Concluir
+    </div>
+  </div>
+
+  <!-- tarefa 2 -->
+  <div class="bg-white text-black w-64 h-40 rounded-md flex flex-col shadow p-3 mx-auto">
+    <h2 class="font-bold text-xl">Título da tarefa</h2>
+    <p class="mt-1">descrição da tarefa...</p>
+    <div class="flex items-center justify-between mt-2">
+      <div class="rounded-2xl px-3 py-1 bg-yellow-600 text-white font-bold text-sm">Média prioridade</div>
+      <p class="text-red-600 font-bold cursor-pointer">Excluir</p>
+    </div>
+    <div class="text-white bg-green-600 w-full h-11 rounded-lg flex mt-3 font-bold items-center justify-center cursor-pointer">
+      Concluir
+    </div>
+  </div>
+
+    <div class="bg-blue-600 text-white font-bold flex flex-col shadow p-3 mx-auto rounded-3xl h-12 md:mt-15 cursor-pointer">
+      Adicionar Tarefa +
+    </div>
+  </div>
+</main>
+<footer class="border-1">
+  slaaaaaaaaaa
+</footer>
+  </body>
+</html>
