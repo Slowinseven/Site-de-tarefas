@@ -54,9 +54,9 @@
     </div>
   </div>
 
-    <div class="bg-blue-600 text-white font-bold flex flex-col shadow p-3 mx-auto rounded-3xl h-12 md:mt-15 cursor-pointer">
+    <button onclick="adicionartarefa()" class="bg-sky-500 text-white font-bold flex flex-col shadow p-3 mx-auto rounded-3xl h-12 md:mt-15 cursor-pointer">
       Adicionar Tarefa +
-    </div>
+    </button>
   </div>
 </main>
 <footer class="border-1 flex flex-col bg-white">
@@ -66,21 +66,36 @@
   </div>
     <!-- fim titulo-->
   <div>
-    <table class="mt-5">
+    <table class="mt-5 mb-5">
       <thead>
         <tr class="text-sm text-left">
           <th class="px-5 md:px-25">Titulo da tarefa</th>
           <th class="px-5 md:px-25">Data de adição</th>
           <th class="px-5 md:px-25">Data para conclusão</th>
+          <th class="px-5 md:px-25">Status da tarefa</th>
         </tr>
       </thead>
       <tbody>
         <td class="px-2 md:px-25">dar agua ao cachorro</td>
         <td class="px-2 md:px-25">05/02/2025</td>
         <td class="px-2 md:px-25">05/02/2025</td>
+        <td class="px-2 md:px-25"><div class="rounded-2xl px-3 py-1 bg-yellow-600 text-white font-bold text-sm">Média prioridade</div></td>
       </tbody>
     </table>
   </div>
 </footer>
+  <div id="container-menu" class="hidden absolute top-0 left-0 w-screen h-screen bg-black/50 z-50 flex justify-center">
+    <iframe class="w-300 h-full border-0 bg-white" src="menu.html"></iframe>
+    <button  class="text-white ml-5 font-2xl font-bold" onclick="fecharMenu()">X</button>
+  </div>
+  <script>
+    function adicionartarefa(){
+      document.getElementById("container-menu").style.display = "flex"
+    }
+
+    function fecharMenu(){
+      document.getElementById("container-menu").style.display = "none"
+    }
+  </script>
   </body>
 </html>

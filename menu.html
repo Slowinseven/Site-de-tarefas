@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            alice: ['"Alice"', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  </head>
+<body class="rounded-4xl h-full">
+    <header class="flex flex-col">
+        <h1 class="text-black text-3xl text-center font-bold mt-8">Adicionar Tarefa</h1>
+    </header>
+    <main class="flex flex-col ml-4">
+        <input class="border-0 placeholder-black text-3xl ring-0 outline-none" type="text" placeholder="Adicionar titulo...">
+        <input class="border-0 placeholder-black text-xl ring-0 outline-none mt-4" type="text" placeholder="Adicionar descrição...">
+        <h1 class="font-bold text-2xl mt-20"> Selecionar prioridade</h1>
+        <div class="flex gap-5 md:mt-5">
+                <button class="rounded-2xl px-3 py-1 bg-red-600 text-white font-bold text-sm cursor-pointer">Alta Prioridade</button>
+                <button class="rounded-2xl px-3 py-1 bg-yellow-600 text-white font-bold text-sm cursor-pointer">Média Prioridade</button>
+                <button class="rounded-2xl px-3 py-1 bg-green-600 text-white font-bold text-sm cursor-pointer">Baixa Prioridade</button>
+        </div>
+    </main>
+    <footer>
+        <button onclick="adicionartarefa()" class="bg-sky-500 text-white font-bold shadow p-3 rounded-3xl h-12 md:mt-15 cursor-pointer flex mx-auto mt-100 md:mt-100">
+        Adicionar Tarefa +
+        </button>
+    </footer>
+</body>
+</html>
